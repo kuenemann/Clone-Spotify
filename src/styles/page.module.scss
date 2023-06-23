@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.navbarList {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbarItem {
+  margin-right: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  flex: 0 0 200px;
+  background-color: #222;
+  padding: 20px;
+  /* Add additional styling for the sidebar */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.featuredSection {
+  margin-bottom: 40px;
+  /* Add additional styling for the featured section */
+}
+
+.popularSection {
+  margin-bottom: 40px;
+  /* Add additional styling for the popular section */
+}
+
+.footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
