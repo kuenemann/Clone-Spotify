@@ -1,27 +1,11 @@
-import logo from "../img/spotify.svg.png";
-
 import React from "react";
 import styles from "../styles/page.module.scss";
+import  '@/components/Header/Header';
+
 
 const HomePage = () => {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <img
-          className={styles.logo}
-          src={logo} // Ajoutez le chemin de l'image pour le logo
-          alt="Spotify Logo"
-        />
-        <nav className={styles.navbar}>
-          <ul className={styles.navbarList}>
-            <li className={styles.navbarItem}>Accueil</li>
-            <li className={styles.navbarItem}>Parcourir</li>
-            <li className={styles.navbarItem}>Rechercher</li>
-            <li className={styles.navbarItem}>Bibliothèque</li>
-          </ul>
-        </nav>
-      </header>
-
       <main className={styles.main}>
         <aside className={styles.sidebar}>
           {/* Ajoutez du contenu pour la barre latérale */}
