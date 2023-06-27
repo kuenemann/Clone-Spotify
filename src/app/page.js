@@ -1,38 +1,75 @@
 import React from "react";
 import styles from "../styles/page.module.scss";
-import  '@/components/Header/Header';
 
-
-const HomePage = () => {
+const Accueil = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <aside className={styles.sidebar}>
-          {/* Ajoutez du contenu pour la barre latérale */}
-        </aside>
-
-        <section className={styles.content}>
-          <div className={styles.featuredSection}>
-            <h2 className={styles.sectionTitle}>Dernières sorties</h2>
-            {/* Affichez les dernières sorties */}
+    <div className={styles.conteneur}>
+      <main className={styles.principal}>
+        <section className={styles.contenu}>
+          <div className={styles.sectionEnVedette}>
+            <h2 className={styles.titreSection}>Dernières sorties</h2>
+            <ul className={styles.listeEnVedette}>
+              {[1, 2, 3, 4, 5].map((index) => (
+                <li className={`${styles.elementEnVedette} ${styles.bloc}${index}`}>
+                  <div className={styles.boiteArtiste}>
+                    <img
+                      className={styles.imageArtiste}
+                      src="" // Chemin de l'image de l'artiste
+                      alt="Artiste"
+                    />
+                    <p className={styles.nomArtiste}>Nom de l'artiste</p>
+                    <p className={styles.infoArtiste}>Informations sur l'artiste</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className={styles.popularSection}>
-            <h2 className={styles.sectionTitle}>
-              Listes de lecture populaires
-            </h2>
-            {/* Affichez des listes de lecture populaires */}
+          <div className={styles.sectionPopulaire}>
+            <h2 className={styles.titreSection}>Listes de lecture populaires</h2>
+            <ul className={styles.listePopulaire}>
+              {[1, 2, 3, 4, 5].map((index) => (
+                <li className={`${styles.elementPopulaire} ${styles.bloc}${index}`}>
+                  <div className={styles.boiteArtiste}>
+                    <img
+                      className={styles.imageArtiste}
+                      src="" // Chemin de l'image de l'artiste
+                      alt="Artiste"
+                    />
+                    <p className={styles.nomArtiste}>Nom de l'artiste</p>
+                    <p className={styles.infoArtiste}>Informations sur l'artiste</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Ajoutez d'autres sections et composants pour afficher plus de contenu */}
+          <div className={styles.sectionNouvellesSorties}>
+            <h2 className={styles.titreSection}>Nouvelles sorties</h2>
+            <ul className={styles.listeNouvellesSorties}>
+              {[1, 2, 3, 4, 5].map((index) => (
+                <li className={`${styles.elementNouvellesSorties} ${styles.bloc}${index}`}>
+                  <div className={styles.boiteArtiste}>
+                    <img
+                      className={styles.imageArtiste}
+                      src="" // Chemin de l'image de l'artiste
+                      alt="Artiste"
+                    />
+                    <p className={styles.nomArtiste}>Nom de l'artiste</p>
+                    <p className={styles.infoArtiste}>Informations sur l'artiste</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        {/* Ajoutez les informations du pied de page */}
+      <footer className={styles.piedPage}>
+        <p className={styles.textePiedPage}>© 2023 Votre Société. Tous droits réservés.</p>
       </footer>
     </div>
   );
 };
 
-export default HomePage;
+export default Accueil;

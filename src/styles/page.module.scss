@@ -1,85 +1,138 @@
-
-
-.container {
+.conteneur {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #000;
-  color: #fff;
-}
-
-.header {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  min-height: 100vh;
+  
+}
+
+.principal {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenu {
+  width: 100%;
+  max-width: 800px;
   padding: 20px;
 }
 
-.logo {
-  width: 100px;
-  height: auto;
-}
-
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 20px;
-}
-
-.navbarList {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navbarItem {
-  margin-right: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.main {
-  display: flex;
-  flex: 1;
-}
-
-.sidebar {
-  flex: 0 0 200px;
-  background-color: #222;
-  padding: 20px;
-  /* Add additional styling for the sidebar */
-}
-
-.content {
-  flex: 1;
-  padding: 20px;
-}
-
-.sectionTitle {
+.titreSection {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.featuredSection {
-  margin-bottom: 40px;
-  /* Add additional styling for the featured section */
+.listeEnVedette,
+.listePopulaire,
+.listeNouvellesSorties {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.popularSection {
-  margin-bottom: 40px;
-  /* Add additional styling for the popular section */
+.elementEnVedette,
+.elementPopulaire,
+.elementNouvellesSorties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #888888; /* Gris */
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.footer {
-  background-color: #333;
-  padding: 20px;
+.boiteArtiste {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imageArtiste {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nomArtiste {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.infoArtiste {
+  font-size: 14px;
+  color: #888888; /* Gris */
+  margin-top: 5px;
+}
+
+.piedPage {
+  background-color: #888888; /* Gris */
+  padding: 10px;
   text-align: center;
 }
 
-.imageTest {
-  width: 400px;
-  height: 350px;
+.textePiedPage {
+  font-size: 14px;
+  color: #ffffff; /* Blanc */
+}
+
+// Style responsive
+@media screen and (max-width: 600px) {
+  .listeEnVedette,
+  .listePopulaire,
+  .listeNouvellesSorties {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  background-color: #1DB954;
+}
+
+.imageTest {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbarItem {
+  margin: 0 10px;
+}
+
+// Style responsive
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbarList {
+    justify-content: flex-start;
+  }
+}
+$couleur-spotify: #1DB954;
